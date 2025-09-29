@@ -1,21 +1,9 @@
-window.addEventListener("load", () => {
-  let members = ["Patricia", "Silvia", "Luis", "Helena", "Lucia", "Carmen"];
-  let title = document.querySelector("#greet");
-  let usersList = document.querySelector("#members ul");
-  //   console.log(usersList);
-  let day = "friday";
-  if (day == "friday" || day == "saturday" || day == "sunday") {
-    // console.log("Hello weekend");
-    title.textContent = "Hello weekend";
-  } else {
-    title.textContent = "Time to work";
-    // console.log("Time to work");
-  }
-  members.forEach((member) => {
-    //create a node (new DOM element)
-    let item = document.createElement("li");
-    console.log(item);
-    item.innerHTML = `<span>Hello ${member}</span>`;
-    usersList.appendChild(item);
-  });
-});
+
+const sayHello = () => "Hello World!";
+const suma = (a, b) => {
+if (typeof a !== "number" || typeof b !== "number") {
+  throw new Error("Both arguments must be numbers");
+}
+return a + b;
+}
+module.exports = { sayHello, suma };
